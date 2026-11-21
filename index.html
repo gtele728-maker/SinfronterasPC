@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MT-001 · Diagnóstico y mantenimiento de equipos</title>
+<meta name="description" content="Ficha técnica MT-001 de diagnóstico y mantenimiento de equipos de cómputo – JALS Soporte Técnico.">
+<meta name="theme-color" content="#0f4c81">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MT-001 · Diagnóstico y mantenimiento de equipos">
+<meta property="og:description" content="Ficha técnica de diagnóstico y mantenimiento de equipos de cómputo.">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<style>
+:root{--bg:#eef1f5;--card:#fff;--fg:#1f2937;--mu:#6b7280;--ln:#d1d5db;--ac:#0f4c81;--in:#fff;--hd:#f3f6fa;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1220;--card:#162033;--fg:#e5e7eb;--mu:#9ca3af;--ln:#334155;--ac:#4f9cf0;--in:#0f172a;--hd:#1c2940}}
+:root[data-theme="dark"]{--bg:#0b1220;--card:#162033;--fg:#e5e7eb;--mu:#9ca3af;--ln:#334155;--ac:#4f9cf0;--in:#0f172a;--hd:#1c2940}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+form{max-width:960px;margin:0 auto;padding:12px}
+.top{display:flex;gap:16px;align-items:center;background:var(--card);border:1px solid var(--ln);border-top:5px solid #0f4c81;border-radius:12px;padding:14px 18px;margin-bottom:12px}
+.logo{width:84px;height:auto;flex:none}
+.brand{font-size:13px;letter-spacing:2px;color:var(--ac)}.brand b{font-size:20px;letter-spacing:3px}
+h1{font-size:17px;margin:2px 0 4px;text-transform:uppercase}
+.meta{margin:0;color:var(--mu);font-size:12px}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:14px 18px;margin-bottom:12px}
+h2{margin:0 0 8px;font-size:15px;color:var(--ac);text-transform:uppercase;display:flex;align-items:center;gap:8px}
+h2 i{font-style:normal;background:var(--ac);color:#fff;border-radius:50%;min-width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-size:12px}
+h3{margin:14px 0 6px;font-size:13px;color:var(--ac)}
+.obj{margin:0 0 10px;color:var(--mu);font-size:12px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px 12px}
+.fld{display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--mu);font-weight:600}
+.fld.w{grid-column:1/-1}
+input,select,textarea{font:inherit;color:var(--fg);background:var(--in);border:1px solid var(--ln);border-radius:6px;padding:6px 8px;width:100%;min-width:0}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--ac);outline-offset:0}
+textarea{resize:vertical}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:var(--hd);color:var(--ac);text-align:left;font-size:12px;padding:6px 8px;border-bottom:2px solid var(--ln)}
+td{padding:4px 6px;border-bottom:1px solid var(--ln);vertical-align:middle}
+td:first-child{min-width:150px}
+td.t,th.r,td.r{text-align:right}
+td.t{white-space:nowrap;min-width:90px;font-variant-numeric:tabular-nums}
+tr.sum td{font-weight:700;background:var(--hd)}
+tr.tot td{font-weight:800;font-size:15px;color:var(--ac);background:var(--hd)}
+.opts{display:flex;flex-wrap:wrap;gap:6px 18px;margin:4px 0 8px}
+.ck{display:flex;gap:6px;align-items:flex-start;font-size:13px;cursor:pointer}
+.ck input{width:auto;margin-top:3px}
+.q{font-weight:600;margin-top:10px;font-size:13px}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.sg>div{border:1px solid var(--ln);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:8px}
+.sg b{color:var(--ac);font-size:13px}
+.nota{font-size:12px;color:var(--mu);padding:4px 6px 12px}
+.bar{position:sticky;bottom:0;display:flex;gap:8px;flex-wrap:wrap;align-items:center;background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+button{font:inherit;border:0;border-radius:8px;padding:9px 16px;cursor:pointer;background:var(--ac);color:#fff;font-weight:600}
+button.s{background:transparent;color:var(--ac);border:1px solid var(--ac)}
+#st{color:var(--mu);font-size:12px;margin-left:auto}
+@media print{
+ :root{--bg:#fff;--card:#fff;--fg:#000;--mu:#444;--ln:#999;--ac:#0f4c81;--in:#fff;--hd:#eef2f7}
+ .bar{display:none}form{padding:0;max-width:none}.card{break-inside:avoid;border-radius:0}
+ input,select,textarea{border:0;border-bottom:1px solid #999;border-radius:0;padding:2px}
+ select{appearance:none}@page{margin:10mm}
+}
+</style>
+</head>
+<body>
+<form id="f" autocomplete="off" onsubmit="return false">
+<header class="top"><img class="logo" alt="Corporación Educativa Sinfronteras" src="assets/logo.png"><div>
+<div class="brand"><b>JALS</b> SOPORTE TÉCNICO</div>
+<h1>Ficha técnica de diagnóstico y mantenimiento de equipos de cómputo</h1>
+<p class="meta">Código del formato: <b>MT-001</b> · Área responsable: Departamento de Sistemas / Soporte Técnico · Tipo de activo: Equipo de cómputo corporativo</p></div></header>
+<main id="app"><noscript>Esta ficha necesita JavaScript activado para funcionar.</noscript></main>
+<p class="nota"><b>NOTA:</b> todo diagnóstico, intervención, repuesto instalado y prueba realizada debe quedar documentado en el historial del activo. No se deben declarar reparaciones o pruebas que no se hayan ejecutado. La ficha individual conserva su ID para consultar todos los mantenimientos históricos.</p>
+<div class="bar"><button type="button" id="bp">Imprimir / guardar PDF</button><button type="button" class="s" id="bs">Guardar borrador</button><button type="button" class="s" id="bc">Nueva ficha</button><span id="st">Los cambios se guardan solos en este dispositivo.</span></div>
+</form>
+<script>
+const $=s=>document.querySelector(s);
+const sel=(n,o)=>`<select name="${n}"><option value="">Seleccionar</option>${o.map(x=>`<option>${x}</option>`).join('')}</select>`;
+const inp=(n,t='text')=>`<input type="${t}" name="${n}"${t==='number'?' min="0" step="any" inputmode="decimal"':''}>`;
+const fld=(l,h,w)=>`<label class="fld${w?' w':''}"><span>${l}</span>${h}</label>`;
+const ta=(n,l,r=3)=>fld(l,`<textarea name="${n}" rows="${r}"></textarea>`,1);
+const rad=(n,o)=>`<div class="opts">${o.map(x=>`<label class="ck"><input type="radio" name="${n}" value="${x}">${x}</label>`).join('')}</div>`;
+const chk=(n,o)=>`<div class="opts">${o.map((x,i)=>`<label class="ck"><input type="checkbox" name="${n}${i}">${x}</label>`).join('')}</div>`;
+const sec=(n,t,ob,b)=>`<section class="card"><h2>${t}</h2>${ob?`<p class="obj">${ob}</p>`:''}${b}</section>`;
+const tbl=(p,rows,def,h2)=>`<div class="tw"><table><tr><th>${h2||'Componente'}</th><th>Estado</th><th>Observaciones / hallazgos</th></tr>${rows.map((r,i)=>`<tr><td>${r[0]}</td><td>${sel(p+i,(r[1]||def).split('|'))}</td><td>${inp(p+i+'o')}</td></tr>`).join('')}</table></div>`;
+const HW='Bueno|Regular|Malo',NA=HW+'|N/A';
+const hw=[['Chasis y estructura'],['Placa madre'],['Procesador (CPU)'],['Memoria RAM'],['Disco HDD / SSD'],['Fuente de poder / cargador'],['Ventiladores y refrigeración'],['Disipador térmico'],['Tarjeta gráfica',NA],['Pantalla / Monitor'],['Teclado'],['Mouse / Touchpad'],['Puertos USB y conexiones'],['Batería (portátiles)',NA],['Cableado y conectores']];
+const sw=[['Sistema operativo','Correcto|Deficiente|Falla'],['Activación y licencia','Correcta|Revisar|N/A'],['Controladores (drivers)','Correctos|Desactualizados|Fallas'],['Antivirus / protección','Correcto|Deficiente|Ausente'],['Actualizaciones','Al día|Pendientes|Fallidas'],['Aplicaciones corporativas','Correctas|Fallas'],['Inicio del sistema','Normal|Lento|Fallido'],['Conectividad de red','Correcta|Intermitente|Fallida'],['Conexión a Internet','Correcta|Intermitente|Fallida'],['Espacio de almacenamiento','Suficiente|Bajo|Crítico'],['Rendimiento general','Bueno|Regular|Deficiente'],['Copias de seguridad','Verificadas|Pendientes|No existen']];
+const AP='Aprobado|No aprobado';
+const ts=[['Encendido y arranque'],['Reconocimiento de RAM'],['Estado del disco'],['Temperaturas','Normal|Anormal'],['Ventilación'],['Sistema operativo'],['Conectividad'],['Aplicaciones corporativas'],['Antivirus / Seguridad'],['Periféricos'],['Rendimiento general']];
+const labor=['Diagnóstico técnico','Mantenimiento preventivo','Mantenimiento correctivo','Mantenimiento adaptativo','Mantenimiento predictivo','Instalación / Configuración'];
+const tipos=['<b>PREVENTIVO:</b> limpieza, inspección, ajustes y prevención de fallas.','<b>CORRECTIVO:</b> reparación o sustitución de componentes y solución de errores.','<b>ADAPTATIVO:</b> actualización o modificación para cumplir nuevos requerimientos.','<b>PREDICTIVO:</b> seguimiento de indicadores para anticipar posibles fallas.'];
+const tcorto=['Preventivo','Correctivo','Adaptativo','Predictivo'];
+const rowsA=[0,1,2,3,4,5].map(i=>`<tr><td>${inp('a'+i+'d')}</td><td>${inp('a'+i+'q','number')}</td><td>${inp('a'+i+'u','number')}</td><td class="t r" id="at${i}">$ 0</td></tr>`).join('');
+const rowsB=labor.map((l,i)=>`<tr><td>${l}</td><td>${inp('b'+i+'h','number')}</td><td>${inp('b'+i+'u','number')}</td><td class="t r" id="bt${i}">$ 0</td></tr>`).join('');
+const firma=(k,t)=>`<div><b>${t}</b>${fld('Nombre',inp(k+'n'))}${fld('Firma',inp(k+'f'))}</div>`;
+$('#app').innerHTML=
+sec(1,'Identificación del equipo','',`<div class="g">${fld('ID del equipo / Activo',inp('id'))}${fld('Marca',inp('marca'))}${fld('Modelo',inp('modelo'))}${fld('Número de serie',inp('serie'))}${fld('Código de inventario',inp('inv'))}${fld('Usuario responsable',inp('user'))}${fld('Área / Departamento',inp('area'))}${fld('Ubicación',inp('ubi'))}${fld('Fecha del último diagnóstico',inp('fud','date'))}${fld('Fecha del diagnóstico actual',inp('fda','date'))}${fld('Técnico responsable',inp('tec'))}${fld('Tipo de equipo',sel('teq',['Desktop','Portátil','All-in-One']))}${fld('Estado del equipo',sel('eeq',['Activo','En reparación','Fuera de servicio']))}</div>`)+
+sec(2,'Diagnóstico físico – Hardware','Identificar el estado de los componentes físicos del equipo.',tbl('h',hw,HW)+`<div class="g" style="margin-top:10px">${ta('hadd','Hallazgos adicionales')}</div>`)+
+sec(3,'Diagnóstico lógico – Software','',tbl('s',sw,'','Elemento')+`<div class="g" style="margin-top:10px">${fld('Sistema operativo y versión',inp('sov'))}${fld('Software instalado relevante',inp('swi'))}${fld('Errores encontrados',inp('err'),1)}</div>`)+
+sec(4,'Diagnóstico general','',`<div class="g">${ta('tiene','¿Qué tiene el equipo actualmente? Síntomas, fallas, daños, errores, comportamientos anormales y condiciones encontradas.')}${ta('falta','¿Qué le hace falta al equipo? Componentes, actualizaciones, configuraciones, reparaciones o recursos que necesita.')}</div><div class="q">Clasificación de los hallazgos</div>${chk('cl',['Hardware','Software','Seguridad informática','Conectividad / Red','Rendimiento','Temperatura / Refrigeración','Almacenamiento','Periféricos','Otro'])}${fld('Otro (especificar)',inp('clo'),1)}<div class="q">Nivel de prioridad</div>${rad('pri',['Crítica: equipo inoperativo o riesgo grave','Alta: afecta significativamente el trabajo','Media: presenta fallas parciales','Baja: requiere ajustes o mejoras'])}<div class="q">¿El equipo puede seguir operando?</div>${rad('op',['Sí, sin restricciones','Sí, con observaciones','No, requiere intervención inmediata'])}`)+
+sec(5,'Tipo de mantenimiento requerido','Marcar todos los que correspondan.',chk('tm',tipos)+`<div class="g">${ta('just','Justificación técnica de la selección')}${ta('acts','Actividades que se deben realizar')}</div>`)+
+sec(6,'Presupuesto de mantenimiento','',`<h3>A. Repuestos y materiales</h3><div class="tw"><table><tr><th>Descripción</th><th>Cantidad</th><th>Valor unitario ($)</th><th class="r">Total</th></tr>${rowsA}<tr class="sum"><td colspan="3">Subtotal repuestos</td><td class="t r" id="sa">$ 0</td></tr></table></div>
+<h3>B. Mano de obra y servicios</h3><div class="tw"><table><tr><th>Actividad</th><th>Horas / Cantidad</th><th>Valor unitario ($)</th><th class="r">Total</th></tr>${rowsB}<tr class="sum"><td colspan="3">Subtotal mano de obra</td><td class="t r" id="sb">$ 0</td></tr></table></div>
+<h3>C. Resumen económico</h3><div class="tw"><table><tr><th>Concepto</th><th class="r">Valor</th></tr><tr><td>Subtotal repuestos</td><td class="t r" id="r1">$ 0</td></tr><tr><td>Subtotal mano de obra</td><td class="t r" id="r2">$ 0</td></tr><tr><td>Otros costos ($)</td><td>${inp('otros','number')}</td></tr><tr><td>Subtotal general</td><td class="t r" id="r3">$ 0</td></tr><tr><td><label class="ck"><input type="checkbox" name="iva">Aplicar IVA (19 %)</label></td><td class="t r" id="r4">$ 0</td></tr><tr class="tot"><td>TOTAL DEL PRESUPUESTO</td><td class="t r" id="r5">$ 0</td></tr></table></div>
+<div class="g" style="margin-top:10px">${fld('Tiempo estimado de intervención',inp('tie'))}${fld('Garantía de los repuestos',inp('gr'))}${fld('Garantía del servicio',inp('gs'))}${fld('Estado de aprobación',sel('apr',['Pendiente','Aprobado','Rechazado']))}</div><div class="q">¿Requiere autorización del responsable?</div>${rad('aut',['Sí','No'])}`)+
+sec(7,'Registro de ejecución del mantenimiento','',`<div class="g">${fld('Fecha de intervención',inp('fi','date'))}${fld('Hora de inicio',inp('hi','time'))}${fld('Hora de finalización',inp('hf','time'))}${fld('Técnico ejecutor',inp('tex'))}${fld('Actividades ejecutadas',inp('aej'))}${fld('Repuestos instalados',inp('rin'))}${fld('Software instalado / actualizado',inp('sin'))}${fld('Configuraciones realizadas',inp('cfg'))}</div><div class="q">Tipo de mantenimiento realizado</div>${chk('tr',tcorto)}<div class="g">${ta('proc','Descripción del procedimiento realizado')}${ta('rret','Repuestos retirados y disposición')}${ta('nov','Novedades durante la intervención')}</div>`)+
+sec(8,'Pruebas y validación final','',tbl('p',ts,AP,'Prueba').replace('<th>Observaciones / hallazgos</th>','<th>Observaciones</th>')+`<div class="q">¿Se solucionaron las fallas identificadas?</div>${rad('sol',['Sí, completamente','Parcialmente','No, requiere intervención adicional'])}<div class="g">${ta('pend','Pendientes y recomendaciones')}</div>`)+
+sec(9,'Estado final del equipo','',rad('fin',['OPERATIVO: equipo funcionando correctamente','OPERATIVO CON OBSERVACIONES: puede trabajar, pero requiere seguimiento','EN OBSERVACIÓN: necesita monitoreo técnico','FUERA DE SERVICIO: no debe utilizarse','BAJA RECOMENDADA: se recomienda evaluar su reemplazo'])+`<div class="g">${fld('Fecha del próximo mantenimiento recomendado',inp('fpm','date'))}${ta('obsf','Observaciones finales')}</div>`)+
+sec(10,'Responsables y aprobaciones','',`<div class="sg">${firma('f1','Técnico responsable')}${firma('f2','Responsable del área de Sistemas')}${firma('f3','Usuario / Responsable del equipo')}</div><div class="g" style="margin-top:10px">${fld('Fecha de entrega',inp('fent','date'))}</div>`);
+
+const F=$('#f'),K='mt001_borrador';
+const fmt=v=>'$ '+Math.round(v).toLocaleString('es-CO');
+const nv=n=>parseFloat(F.elements[n]?.value)||0;
+function calc(){let a=0,b=0;
+ for(let i=0;i<6;i++){const t=nv('a'+i+'q')*nv('a'+i+'u');a+=t;$('#at'+i).textContent=fmt(t);
+  const u=nv('b'+i+'h')*nv('b'+i+'u');b+=u;$('#bt'+i).textContent=fmt(u);}
+ const s=a+b+nv('otros'),iv=F.elements.iva.checked?s*.19:0;
+ [[ 'sa',a],['sb',b],['r1',a],['r2',b],['r3',s],['r4',iv],['r5',s+iv]].forEach(([k,v])=>$('#'+k).textContent=fmt(v));}
+function collect(){const d={};for(const e of F.elements){if(!e.name)continue;
+ if(e.type==='radio'){if(e.checked)d[e.name]=e.value}else if(e.type==='checkbox')d[e.name]=e.checked;else d[e.name]=e.value}return d}
+function fill(d){for(const e of F.elements){if(!e.name)continue;
+ if(e.type==='radio')e.checked=d[e.name]===e.value;else if(e.type==='checkbox')e.checked=!!d[e.name];else e.value=d[e.name]||''}calc()}
+const st=m=>$('#st').textContent=m;
+function save(m){try{localStorage.setItem(K,JSON.stringify(collect()));st(m||'Borrador guardado en este dispositivo.')}catch(e){st('No se pudo guardar en este dispositivo.')}}
+try{const r=localStorage.getItem(K);if(r){fill(JSON.parse(r));st('Se restauró tu último borrador.')}}catch(e){}
+F.addEventListener('input',()=>{calc();save()});F.addEventListener('change',()=>{calc();save()});
+$('#bp').onclick=()=>window.print();
+$('#bs').onclick=()=>save('Borrador guardado.');
+let cf=0;$('#bc').onclick=function(){if(!cf){cf=1;this.textContent='¿Borrar todo? Pulsa otra vez';setTimeout(()=>{cf=0;this.textContent='Nueva ficha'},4000);return}
+ cf=0;this.textContent='Nueva ficha';F.reset();fill({});try{localStorage.removeItem(K)}catch(e){}st('Ficha nueva en blanco.')};
+</script>
+</body>
+</html>
